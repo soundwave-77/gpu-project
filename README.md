@@ -11,9 +11,23 @@
 python3 kirienko/server.py
 ```
 Сам файл `server.py` уже лежит в моей папке.
-+ Установить зависимости, которые нужны для работы клиента, и отправить запрос на сервер. Все это делается командой
+
++ Создаем и запускам виртуальное окружение, устанавливаем зависимости:
 ```
-python -m venv venv && source venv/bin/activate && pip install -r requirements.txt && python3 client.py
+python -m venv venv && source venv/bin/activate && pip install -r requirements.txt
+```
+
++ Устанавливаем переменные окружения для SSH:
+```
+export SSH_USERNAME="логин для SSH подключения"
+```
+```
+export SSH_PASSWORD="Пароль для SSH подключения"
+```
+
++ Отправить запрос на сервер с помощью клиента. Все это делается командой
+```
+python3 client.py
 ```
 Это делается локально, не на машине.
 

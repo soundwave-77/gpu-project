@@ -1,3 +1,4 @@
+import os
 import requests
 import numpy as np
 from sshtunnel import SSHTunnelForwarder
@@ -9,8 +10,8 @@ matrix = np.random.rand(10, 5).tolist()
 # Настройка туннеля: установим SSH-соединение с сервером
 server = SSHTunnelForwarder(
     ssh_address_or_host=("176.109.74.200", 2223), # адрес SSH-сервера и порт
-    ssh_username="student",
-    ssh_password="7sKBTkxN8424R5hs",
+    ssh_username=os.getenv("SSH_USERNAME"),
+    ssh_password=os.getenv("SSH_PASSWORD"),
     remote_bind_address=("172.17.0.1", 1337), # адрес и порт на удалённом сервере, к которому нужно подключаться
     local_bind_address=("127.0.0.1", 7777) # локальный адрес и порт, через который будет доступен сервис
 )
