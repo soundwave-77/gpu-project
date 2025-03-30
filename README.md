@@ -12,6 +12,8 @@ python3 kirienko/server.py
 ```
 Сам файл `server.py` уже лежит в моей папке.
 
+**ДАЛЕЕ ЛОКАЛЬНО:**
+
 + Создаем и запускам виртуальное окружение, устанавливаем зависимости:
 ```
 python -m venv venv && source venv/bin/activate && pip install -r requirements.txt
@@ -29,6 +31,5 @@ export SSH_PASSWORD="Пароль для SSH подключения"
 ```
 python3 client.py
 ```
-Это делается локально, не на машине.
 
 
